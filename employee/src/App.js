@@ -11,7 +11,9 @@ import EmpEdit from './EmpEdit'
 function App() {
   return (
     <div className='App'>
+      <div className='m-5'></div>
       <h1>ReactJS CRUD Employee Project</h1>
+      <div className='m-5'></div>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<EmpListing />}></Route>

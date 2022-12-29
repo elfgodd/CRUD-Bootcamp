@@ -13,7 +13,20 @@ const EmpListing = () => {
     navigate('/employee/edit/' + id)
   }
 
-  const RemoveFunc = (id) => {}
+  const RemoveFunc = (id) => {
+    if (window.confirm('Do you want to remove?')) {
+      fetch('http://localhost:8000/employee/' + id, {
+        method: 'DELETE',
+      })
+        .then((res) => {
+          alert('Removed Successfully.')
+          window.location.reload()
+        })
+        .catch((err) => {
+          console.log(err.message)
+        })
+    }
+  }
 
   useEffect(() => {
     fetch('http://localhost:8000/employee')

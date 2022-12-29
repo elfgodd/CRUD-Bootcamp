@@ -13,7 +13,11 @@ const EmpEdit = () => {
       })
       .then((resp) => {
         // setEmpData(resp)
-        idChange(resp.id)
+        setIdChange(resp.id)
+        setNameChange(resp.name)
+        setEmailChange(resp.email)
+        setPhoneChange(resp.phone)
+        setActiveChange(resp.active)
       })
       .catch((err) => {
         console.log(err.message)
@@ -48,8 +52,8 @@ const EmpEdit = () => {
       active: activeChange,
     }
 
-    fetch('http://localhost:8000/employee', {
-      method: 'POST',
+    fetch('http://localhost:8000/employee/' + empid, {
+      method: 'PUT',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(empData),
     })
