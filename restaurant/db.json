@@ -1,0 +1,15 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Desayuno caribeño",
+      "items": "Bollo2 e yuka, suero, queso, jugo de naranja"
+    },
+    {
+      "id": 2,
+      "name": "A la caballa",
+      "items": "Carne asada, cebolla, huevo frito, tomate",
+      "active": true
+    }
+  ]
+}
