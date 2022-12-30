@@ -1,8 +1,9 @@
 import './App.css'
-import { BrowserRouter, Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Pages imports
 import Home from './pages/Home'
+import Blog from './pages/Blog'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/blog/:slug' element={<Blog />} />
         </Routes>
       </BrowserRouter>
     </>

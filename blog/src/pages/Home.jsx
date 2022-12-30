@@ -26,6 +26,21 @@ const Home = () => {
     return str.length > n ? str.slice(0, n - 1) + '....' : str
   }
 
+  // function convertToSlug(Text) {
+  //   return Text.toLowerCase()
+  //     .replace(/ /g, '-')
+  //     .replace(/[-]+/g, '-')
+  //     .replace(/[^\w-]+/g, '')
+  // }
+
+  const convertToSlug = (str) =>
+    str
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+
   return (
     <>
       <Header />
@@ -36,7 +51,7 @@ const Home = () => {
               posts.map((post, index) => {
                 return (
                   <div key={index} className='col-md-4 mb-4'>
-                    <Link to=''>
+                    <Link to={`/blog/${convertToSlug(post.title)}`}>
                       <div className='card' style={{ height: '100%' }}>
                         <div className='card-body'>
                           <h5 className='card-title'>
