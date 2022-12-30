@@ -3,22 +3,8 @@
     {
       "id": 1,
       "name": "Alberto",
-      "email": "alberto@gmail.com",
-      "phone": "300-123-4567"
-    },
-    {
-      "id": 2,
-      "name": "Josue",
-      "email": "josue@gmail.com",
-      "phone": "300-454-7874",
-      "active": true
-    },
-    {
-      "id": 3,
-      "name": "Yarelis",
-      "email": "yarelis@gmail.com",
-      "phone": "300-231-3632",
-      "active": true
+      "email": "FrontEnd y me gusta el Full Stack",
+      "phone": "React y Flutter para el Front y para back NodeJS"
     }
   ]
 }
